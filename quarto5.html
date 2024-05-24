@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmar reserva- quarto</title>
+    <link rel="stylesheet" href="stylequartos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body style="background-color: darkslategray;">
+<div style="padding: 128px;">
+    <div class="quarto" style="font-weight: bold; color: white;">
+      <div style="text-align: center;">
+        <img class="imgquarto" src="imagens/quarto1.jpeg">
+      </div>
+      <div style="border-style: inset ;display: inline-flex ;text-align: center; font-weight: bold; color: white; border-radius: 10px 10px 10px 10px; padding: 10px; margin-top: 10px;">
+      <li>1(uma) cama de casal.</li>
+      <li>Café da manhã/Jantar no quarto.</li>
+      <li>Quarto com vista para o mar</li>
+      <li>Banheira de hidromassagem</li>
+      <li>Banheiro adaptado para sua estadia</li>
+      <li>Acessibilidade par cadeirantes, cegos</li>
+      <li>Amplo espaço para no máximo 5 pessoas.</li>
+    </div>
+        <h2 class="tipo-quarto">Quarto</h2>
+        <div class="modal-body">
+            <form id="formReserva">
+              <div class="form-group" style="display: flex;">
+                <label for="dataEntrada">Data de Entrada:</label>
+                <input type="date" class="form-control" id="dataEntrada" required>
+              </div>
+              <div class="form-group">
+                <label for="dataSaida">Data de Saída:</label>
+                <input type="date" class="form-control" id="dataSaida" required>
+              </div>
+              <div class="form-group">
+                <label for="quantidadePessoas">Quantidade de Pessoas:</label>
+                <input type="number" class="form-control" id="quantidadePessoas" min="1" required>
+              </div>
+              <div class="form-group">
+                <label for="formaPagamento">Forma de Pagamento:</label>
+                <select class="form-control" id="formaPagamento" required>
+                  <option value="">Selecione</option>
+                  <option value="cartao">Cartão de Crédito</option>
+                  <option value="boleto">Boleto Bancário</option>
+                  <option value="paypal">PayPal</option>
+                </select>
+              </div>
+              <div style="text-align: center;">
+              <button type="submit" class="btn btn-primary" style="background-color: crimson;">Confirmar reserva</button>
+              <button style="margin: 10px; display: inline-flexbox; background-color: crimson;" type="submit" class="btn btn-primary" href="alugar.html ">Voltar</button>
+              <button style="margin: 10px; display: inline-flexbox; background-color: crimson;" type="submit" class="btn btn-primary" href="index.html">Inicio</button>
+            </div>
+            </form>
+          </div>
+        </div>
+    </div>
+</body>
+</html>

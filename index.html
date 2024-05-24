@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morfeu Hotel</title>
+    <link rel="icon" type="image/png" href="icone.png">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="stylesalugar.css">
+    <style>
+    </style>
+</head>
+<body style="background-color: brown;">
+    <h1 style="background-color: crimson; font-size: 40px; color: #ffff; padding: 10px; border-radius: 10px;"><strong>MORFEU HOTEL</strong></h1>    
+    <div class="nav"><list></div>
+    <br>
+    <div class="container">
+        <center>
+            <div class="carousel">
+                <img src="imagens/carrosel1.jpeg" alt="Imagem de academia do hotel.">
+                <img src="imagens/carrosel2.jpeg" alt="Imagem da área de lazer do hotel">
+                <img src="imagens/carrosel3.jpeg" alt="Imagem da piscina do hotel.">
+                <img src="imagens/carrosel4.jpeg" alt="Imagem de um dos quartos do hotel."> 
+            </div>
+        </center>
+        <br>
+        <button class="botao-voltar" onclick="window.location.href='alugar.html'">Quartos</button>
+        <div class="navbar">
+            <div style="display: inline-flexbox;">
+                <div style="display: inline-flexbox;">
+                    <div class="text">
+                        <h2 id="sobre">Sobre</h2>
+                        <p>Bem-vindo à nossa mais nova rede de hotéis, onde <strong>qualidade</strong> é nossa prioridade desde o primeiro contato.</p>
+                        <p>Estamos comprometidos em oferecer a melhor experiência aos nossos clientes, garantindo <strong>conforto</strong> e <strong>higiene</strong> em todas as acomodações.</p>
+                        <p>Nossa equipe está empenhada em proporcionar uma excelente estadia, desde a <strong>recepção calorosa</strong> até a alocação cuidadosa em nossas instalações.</p>
+                        <p>Aqui, cada detalhe é pensado para garantir o <strong>máximo conforto</strong> e <strong>satisfação</strong>.</p>
+                        <p>Seja para viagens de lazer ou negócios, estamos prontos para <strong>superar suas expectativas</strong> e tornar sua estadia <strong>memorável</strong>.</p>
+                        <p>Experimente o padrão de <strong>excelência</strong> em hospitalidade que oferecemos em nossa nova rede de hotéis.</p>
+                    </div>       
+                    <div class="text" style="text-align: center;">
+                        <h2 id="diferencial">Diferencial</h2>
+                        <p>Somos uma rede de hotel <strong>inovadora</strong>, sempre buscando o melhor da atualidade para atender nossos clientes.</p>
+                        <p>Temos academia disponível de seu nível para atender todos os hóspedes, além de um ambiente para <strong>zumba</strong>, <strong>sppining</strong> e <strong>playgrounds</strong>.</p>
+                    </div>
+                    <div class="text" style="text-align: center;">
+                        <h2 id="diferencial">Comodidades de nosso hotel</h2>
+                        <p>Academia, estacionamento, wi-fi gratuito para hospedes, recepçaõ 24h, piscina, serviço de quarto 24h, separar quartos para fumantes,restaurante, acessibilidade para pessoas com qualquer tipo de deficiencias, Spar e centro de bem estar, estaçao de carga para veiculos eletricos, salão de beleza</p>
+                        </div>
+                    </div>
+                    <div class="review">
+                        <h2>Avaliações de Clientes</h2>
+                        <div class="rating" id="rating" style="display: inline-table;">
+                            <img src="imagens/avatar-de-perfil.png" alt="Pessoa" class="icon">
+                        </div>
+                        <p id="reviewText"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal de login -->
+    <div class="modal" id="modal-login">
+        <!-- Conteúdo do modal de login -->
+        <h2>Faça login para acessar</h2>
+        <form onsubmit="return login()">
+            <label for="username">Usuário:</label>
+            <input type="text" id="username" name="username">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" name="password">
+            <button type="submit">Entrar</button>
+        </form>
+    </div>
+    <!-- Fundo desfocado -->
+    <div class="modal-background" id="modal-background"></div>
+    <script src="scripts.js"></script>
+</body>
+</html>

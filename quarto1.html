@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="stylequartos.css">
+    <title>Pagamento do Quarto de Hotel</title>
+    <style>
+      .imgquarto{
+        text-align: center;
+        height: auto;
+        width: auto;
+        align-items: flex-end;
+      }
+    </style>
+</head>
+<body>
+  <img class="imgquarto" src="imagens/imagem5.jpeg" alt="Hotel Image">
+<div class="header">
+    <h1>Pagamento do Quarto de Hotel</h1>
+    <p>Comodidades...</p>
+</div>
+<div class="container">
+    <form>
+        <div class="form-group">
+            <label for="dataEntrada">Data de Entrada:</label>
+            <input type="date" id="dataEntrada">
+        </div>
+        <div class="form-group">
+            <label for="dataSaida">Data de Saída:</label>
+            <input type="date" id="dataSaida">
+        </div>
+        <div class="form-group">
+            <label for="formaPagamento">Forma de Pagamento:</label>
+            <select id="formaPagamento">
+                <option value="">Selecione</option>
+                <option value="cartao">Cartão de Crédito</option>
+                <option value="boleto">Boleto Bancário</option>
+                <option value="paypal">PayPal</option>
+            </select>
+        </div>
+        <div class="btn-container">
+            <button type="button" onclick="openModal()">Confirmar Pagamento</button>
+            <button type="button" onclick="window.location.href='alugar.html'">Voltar</button>
+            <button type="button" onclick="window.location.href='index.html'">Inicio</button>
+        </div>
+    </form>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <p>Pagamento confirmado com sucesso!</p>
+    </div>
+</div>
+
+<script>
+    function openModal() {
+        document.getElementById('modal').style.display = 'block';
+    }
+
+    function closeModal() {
+        document.getElementById('modal').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
