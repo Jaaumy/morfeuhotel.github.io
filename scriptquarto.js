@@ -19,3 +19,12 @@ setInterval(() => {
     }
     carousel.style.transform = `translateX(${-counter * 100}%)`;
 }, interval);
+
+document.getElementById('formReserva').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio do formulário
+    $('#paymentModal').modal('show'); // Mostra o modal
+  });
+
+  document.getElementById('backButton').addEventListener('click', function() {
+    window.location.href = 'alugar.html'; // Redireciona para a página de alugar
+  });

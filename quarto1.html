@@ -3,67 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="stylequartos.css">
-    <title>Pagamento do Quarto de Hotel</title>
-    <style>
-      .imgquarto{
-        text-align: center;
-        height: auto;
-        width: auto;
-        align-items: flex-end;
-      }
-    </style>
+    <title>Confirmar hospedagem|</title>
+    <link rel="stylesheet" href="stylequartos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
-  <img class="imgquarto" src="imagens/imagem5.jpeg" alt="Hotel Image">
-<div class="header">
-    <h1>Pagamento do Quarto de Hotel</h1>
-    <p>Comodidades...</p>
-</div>
-<div class="container">
-    <form>
-        <div class="form-group">
-            <label for="dataEntrada">Data de Entrada:</label>
-            <input type="date" id="dataEntrada">
+<body style="background-color: #965620;">
+<div style="padding: 128px;">
+    <div class="quarto" style="font-weight: bold; color: white;">
+      <div style="text-align: center;">
+        <img class="imgquarto" src="imagens/quarto1.jpeg">
+      </div>
+      <div style="border-style: solid ;display: inline-flex ;text-align: center; font-weight: bold; color: white; border-radius: 10px 10px 10px 10px; padding: 10px; margin-top: 10px;">
+      <li>1(uma) cama de casal.</li>
+      <li>Café da manhã/Jantar no quarto.</li>
+      <li>Quarto com vista para o mar</li>
+      <li>Banheira de hidromassagem</li>
+      <li>Banheiro adaptado para sua estadia</li>
+      <li>Acessibilidade par cadeirantes, cegos</li>
+      <li>Amplo espaço para no máximo 5 pessoas.</li>
+    </div>
+        <h2 class="tipo-quarto" style="font-size: 300%; text-align: center;">⭐⭐</h2>
+        <div class="modal-body">
+            <form id="formReserva">
+              <div class="form-group" style="display: flex;">
+                <label for="dataEntrada">Data de Entrada:</label>
+                <input type="date" class="form-control" id="dataEntrada">
+              </div>
+              <div class="form-group">
+                <label for="dataSaida">Data de Saída:</label>
+                <input type="date" class="form-control" id="dataSaida">
+              </div>
+              <div class="form-group">
+                <label for="quantidadePessoas">Quantidade de Pessoas:</label>
+                <input type="number" class="form-control" id="quantidadePessoas" min="1">
+              </div>
+              <div class="form-group">
+                <label for="formaPagamento">Forma de Pagamento:</label>
+                <select class="form-control" id="formaPagamento">
+                  <option value="">Selecione</option>
+                  <option value="cartao">Cartão de Crédito</option>
+                  <option value="boleto">Boleto Bancário</option>
+                  <option value="paypal">PayPal</option>
+                </select>
+              </div>
+              <div style="text-align: center;">
+              <button type="submit" class="botao">Confirmar reserva</button>
+              <br><br>
+              <a href="alugar.html" button type="submit" class="botao">Voltar</a>
+              <a href="index.html" button  type="submit" class="botao">Inicio</a>
+            </div>
+            </form>
+          </div>
         </div>
-        <div class="form-group">
-            <label for="dataSaida">Data de Saída:</label>
-            <input type="date" id="dataSaida">
-        </div>
-        <div class="form-group">
-            <label for="formaPagamento">Forma de Pagamento:</label>
-            <select id="formaPagamento">
-                <option value="">Selecione</option>
-                <option value="cartao">Cartão de Crédito</option>
-                <option value="boleto">Boleto Bancário</option>
-                <option value="paypal">PayPal</option>
-            </select>
-        </div>
-        <div class="btn-container">
-            <button type="button" onclick="openModal()">Confirmar Pagamento</button>
-            <button type="button" onclick="window.location.href='alugar.html'">Voltar</button>
-            <button type="button" onclick="window.location.href='index.html'">Inicio</button>
-        </div>
-    </form>
-</div>
-
-<!-- Modal -->
-<div id="modal" class="modal">
-    <div class="modal-content">
-        <span class="close" onclick="closeModal()">&times;</span>
-        <p>Pagamento confirmado com sucesso!</p>
     </div>
 </div>
+<!-- Modal de confirmação de pagamento -->
+<div class="modal fade" id="pagamentoModal" tabindex="-1" role="dialog" aria-labelledby="labelPagamento" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="paymentModalLabel">Pagamento Confirmado</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Seu pagamento foi confirmado com sucesso!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" style="background-color: #401801;" id="backButton">Voltar</button>
+      </div>
+    </div>
+  </div>
+</div>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <script>
-    function openModal() {
-        document.getElementById('modal').style.display = 'block';
-    }
+  document.getElementById('formReserva').addEventListener('submit', function(event) {
+    event.preventDefault(); // Evita o envio do formulário
+    $('#pagamentoModal').modal('show'); // Mostra o modal
+  });
 
-    function closeModal() {
-        document.getElementById('modal').style.display = 'none';
-    }
+  document.getElementById('backButton').addEventListener('click', function() {
+    window.location.href = 'alugar.html'; // Redireciona para a página de alugar
+  });
 </script>
-
 </body>
 </html>

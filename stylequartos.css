@@ -29,14 +29,14 @@ body {
 .container {
     max-width: 600px;
     margin: 50px auto;
-    background-color: #8C754A ;
+    background-color:black ;
     padding: 20px;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .form-group {
     margin-bottom: 20px;
+    display: flex;
 }
 
 label {
@@ -57,13 +57,16 @@ select {
     text-align: center;
 }
 
-button {
-    padding: 10px 20px;
-    margin-right: 10px;
+.botao {
+    margin-top: 10px;
+    display: block;
+    margin: 5px auto;
+    padding: 15px 30px;
+    background-color:#401801;
+    color: #fff;
     border: none;
     border-radius: 5px;
-    background-color: #007bff;
-    color: white;
+    font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
 }

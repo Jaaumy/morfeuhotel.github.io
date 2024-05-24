@@ -5,7 +5,7 @@ body {
     padding: 0;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Centraliza os botões horizontalmente */
+    align-items: justify; /* Centraliza os botões horizontalmente */
     justify-content: center; /* Centraliza os botões verticalmente */
     height: 100vh; /* Altura total da tela */
 }
@@ -13,10 +13,15 @@ body {
 .titulo {
     background-color: #401801 ;
     color: white ;
-    border-radius: 5000px 150px 150px; 
-    text-align: left; 
-    width: 50%;
-    font-size: 80px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto 10px;
+    padding: 10px;
+    height: 30%;   
+    margin-top: 10px;
+    margin-block: 10px;
 }
 .h2{
     text-align: center;
@@ -24,8 +29,10 @@ body {
     color: white;
     text-align: center;
     border-radius: 5000px 150px 150px;
-    background-color: #401801 ;     
+    background-color: #401801 ; 
+     
 }
+
 .botao-reservar {
     display: block;
     margin: 10px auto;
@@ -71,12 +78,25 @@ body {
     height: 90%;
     width: 100%;
 }
-
+.selecionar-quarto {
+    display: block;
+    margin: auto; /* Centraliza horizontalmente */
+    text-align: center; /* Alinha o texto ao centro */
+    padding: 15px 15px 15px 15px;
+    margin-bottom: 20px;
+    background-color: #401801;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    font-weight: bold;
+}
 .fechar-modal:hover {
     background-color:#401801; /* Altera a cor de fundo quando o mouse passa por cima */
 }
 /* Estilos para o botão de voltar */
 .botao-voltar {
+    margin-top: 10px;
     display: block;
     margin: 5px auto;
     padding: 15px 30px;
@@ -87,8 +107,4 @@ body {
     font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s;
-}
-
-.botao-voltar:hover {
-    background-color: #A66B37;
 }

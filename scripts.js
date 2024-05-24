@@ -20,6 +20,19 @@ function nextImage() {
 // Define o intervalo para mudar de imagem a cada 3 segundos
 setInterval(nextImage, 1500);
 
+
+// Função para abrir a mini janela
+function openModal() {
+    document.getElementById("modal").style.display = "block";
+    document.body.style.overflow = "hidden"; // Impede a rolagem da tela de fundo
+}
+
+// Função para fechar a mini janela
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+    document.body.style.overflow = "auto"; // Permite a rolagem da tela de fundo novamente
+}
+
 const reviews = [
     { text: "Excelente hotel, ótimo serviço!", icon: "imagens/avatar-de-perfil.png"},
     { text: "Estadia maravilhosa, quartos confortáveis.", icon: "imagens/avatar-de-perfil.png" },

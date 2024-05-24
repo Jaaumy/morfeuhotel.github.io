@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Morfeu Hotel</title>
+    <title style="font-size: 50%;">Morfeu Hotel</title>
     <link rel="icon" type="image/png" href="icone.png">
     <link rel="stylesheet" type="text/css" href="styles.css">
     <link rel="stylesheet" href="stylesalugar.css">
     <style>
     </style>
 </head>
-<body style="background-color: brown;">
-    <h1 style="background-color: crimson; font-size: 40px; color: #ffff; padding: 10px; border-radius: 10px;"><strong>MORFEU HOTEL</strong></h1>    
+<body>
+    <h1 class="titulo"><strong>MORFEU HOTEL</strong></h1>    
     <div class="nav"><list></div>
     <br>
     <div class="container">
@@ -23,12 +23,11 @@
                 <img src="imagens/carrosel4.jpeg" alt="Imagem de um dos quartos do hotel."> 
             </div>
         </center>
-        <br>
         <button class="botao-voltar" onclick="window.location.href='alugar.html'">Quartos</button>
         <div class="navbar">
             <div style="display: inline-flexbox;">
                 <div style="display: inline-flexbox;">
-                    <div class="text">
+                    <div class="text" style="text-align: center;">
                         <h2 id="sobre">Sobre</h2>
                         <p>Bem-vindo à nossa mais nova rede de hotéis, onde <strong>qualidade</strong> é nossa prioridade desde o primeiro contato.</p>
                         <p>Estamos comprometidos em oferecer a melhor experiência aos nossos clientes, garantindo <strong>conforto</strong> e <strong>higiene</strong> em todas as acomodações.</p>
@@ -64,9 +63,9 @@
         <h2>Faça login para acessar</h2>
         <form onsubmit="return login()">
             <label for="username">Usuário:</label>
-            <input type="text" id="username" name="username">
+            <input type="text" id="username" name="username" required>
             <label for="password">Senha:</label>
-            <input type="password" id="password" name="password">
+            <input type="password" id="password" name="password" req>
             <button type="submit">Entrar</button>
         </form>
     </div>
